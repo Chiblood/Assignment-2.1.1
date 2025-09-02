@@ -44,6 +44,11 @@ namespace Assignment_2._1._1
             base.DisplayInfo();
             Console.WriteLine($"Name: {Name}, Level: {Level}");
         }
+
+        public virtual string Interact()
+        {
+            return "I have nothing to say.";
+        }
     }
 
     // Another derived class
@@ -64,7 +69,7 @@ namespace Assignment_2._1._1
         public override void DisplayInfo()
         {
             base.DisplayInfo();
-            Console.WriteLine($"Name: {Name}, Level: {Level}, Role: {Role}");
+            Console.WriteLine($"Role: {Role}");
         }
     }
     public class PlayerCharacter : Character
@@ -72,17 +77,12 @@ namespace Assignment_2._1._1
         public PlayerCharacter(int id, string description, string name, int level = 1)
             : base(id, description, name, level)
         {
-            Name = name;
-            Level = level;
-            Description = description;
-
-        }
-        public override void DisplayInfo()
-        {
-            base.DisplayInfo();
+            // The base constructor already handles setting these properties.
+            // No additional code is needed here.
         }
 
-        public static string Interact()
+        // Override the Interact method to provide player-specific dialogue
+        public override string Interact()
         {
             return $"Please help me save my friend Bumpy!";
         }
@@ -96,6 +96,8 @@ namespace Assignment_2._1._1
             : base(id, description)
         {
             Name = name;
+            Loot = loot;
+            Level = level;
         }
         public virtual string Dialogue()
         {
@@ -112,9 +114,7 @@ namespace Assignment_2._1._1
         public Animal(int id, string description, string name, string loot = "Animal Hide", int level = 1)
             : base(id, description, name, loot, level)
         {
-            Name = name;
-            Loot = loot;
-            Level = level;
+            // The base constructor already handles setting these properties.
         }
         public override string Dialogue()
         {
@@ -127,23 +127,23 @@ namespace Assignment_2._1._1
         static void Main(string[] args)
         {
             // Create instances of the classes
-            PlayerCharacter Bluey = new(1, "A brave adventurer", "Bluey", 6);
-            NPC Tracy = new(2, "A wise old wolf hound", "Tracy", "Quest Giver");
-            Mob Socks = new(3, "A wild puppy", "Socks", "Rare Item");
-            Animal Bumpy = new(4, "A gentle and mild puppy", "Bumpy", "Skittles", 1);
+            PlayerCharacter bluey = new(1, "A brave adventurer", "Bluey", 6);
+            NPC tracy = new(2, "A wise old wolf hound", "Tracy", "Quest Giver");
+            Mob socks = new(3, "A wild puppy", "Socks", "Rare Item", 2);
+            Animal bumpy = new(4, "A gentle and mild puppy", "Bumpy", "Skittles", 1);
 
             // Display information
-            Tracy.DisplayInfo();
-            Console.WriteLine(Tracy.Dialogue());
+            tracy.DisplayInfo();
+            Console.WriteLine(tracy.Dialogue());
 
-            Bluey.DisplayInfo();
-            Console.WriteLine(PlayerCharacter.Interact());
+            bluey.DisplayInfo();
+            Console.WriteLine(bluey.Interact());
 
-            Socks.DisplayInfo();
-            Console.WriteLine(Socks.Dialogue());
+            socks.DisplayInfo();
+            Console.WriteLine(socks.Dialogue());
 
-            Bumpy.DisplayInfo();
-            Console.WriteLine(Bumpy.Dialogue());
+            bumpy.DisplayInfo();
+            Console.WriteLine(bumpy.Dialogue());
         }
     }
 }
