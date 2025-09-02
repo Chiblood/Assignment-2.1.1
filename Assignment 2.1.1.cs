@@ -8,23 +8,6 @@
 */
 namespace Assignment_2._1._1
 {
-    // Base class, restricted from instantiation
-    public abstract class Entity(int id, string description)
-    {
-        public int Id { get; set; } = id;
-        public string Description { get; set; } = description;
-
-        // public Entity(int id, string description)
-        // {
-        //     Id = id;
-        //     Description = description;
-        // }
-
-        public virtual void DisplayInfo()
-        {
-            Console.WriteLine($"ID: {Id}, Description: {Description}");
-        }
-    }
 
     // Derived class
     public class Character : Entity
@@ -135,12 +118,15 @@ namespace Assignment_2._1._1
             // Display information
             tracy.DisplayInfo();
             Console.WriteLine(tracy.Dialogue());
+            Console.WriteLine();
 
             bluey.DisplayInfo();
             Console.WriteLine(bluey.Interact());
+            Console.WriteLine();
 
             socks.DisplayInfo();
             Console.WriteLine(socks.Dialogue());
+            Console.WriteLine();
 
             bumpy.DisplayInfo();
             Console.WriteLine(bumpy.Dialogue());
