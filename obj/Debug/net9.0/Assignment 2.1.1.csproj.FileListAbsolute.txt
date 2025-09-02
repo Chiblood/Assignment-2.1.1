@@ -3,3 +3,13 @@ C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assign
 C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.AssemblyInfo.cs
 C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.csproj.CoreCompileInputs.cache
 C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.sourcelink.json
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\bin\Debug\net9.0\Assignment 2.1.1.exe
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\bin\Debug\net9.0\Assignment 2.1.1.deps.json
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\bin\Debug\net9.0\Assignment 2.1.1.runtimeconfig.json
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\bin\Debug\net9.0\Assignment 2.1.1.dll
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\bin\Debug\net9.0\Assignment 2.1.1.pdb
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.dll
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\refint\Assignment 2.1.1.dll
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.pdb
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\Assignment 2.1.1.genruntimeconfig.cache
+C:\Users\chibl\OneDrive\Documents\Learning Coding\MSSA\Week 2 Assignments\Assignment 2.1.1\obj\Debug\net9.0\ref\Assignment 2.1.1.dll

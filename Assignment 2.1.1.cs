@@ -8,8 +8,8 @@
 */
 namespace Assignment_2._1._1
 {
-    // Base class
-    public class Entity(int id, string description)
+    // Base class, restricted from instantiation
+    public abstract class Entity(int id, string description)
     {
         public int Id { get; set; } = id;
         public string Description { get; set; } = description;
@@ -52,18 +52,14 @@ namespace Assignment_2._1._1
         public string Role { get; set; } = role;
         public bool QuestGiver { get; set; } = role.ToLower() == "quest giver";
 
-        public string Dialogue
+        public string Dialogue()
         {
-            get
+            return Role.ToLower() switch
             {
-                return Role.ToLower() switch // This is a C# 8.0 feature called a switch expression.
-                {
-                    "quest giver" => "Greetings, adventurer! I have a task for you.",
-                    "merchant" => "Welcome to my shop! Take a look at my wares.",
-                    "trainer" => "I can help you hone your skills.",
-                    _ => "Hello there!",
-                };
-            }
+                "quest giver" => "Hello, adventurer! What can I do for you.",
+                "merchant" => "Welcome to my shop! Take a look at my wares.",
+                _ => "Hello there!",
+            };
         }
         public override void DisplayInfo()
         {
@@ -124,11 +120,6 @@ namespace Assignment_2._1._1
         {
             return "Yawn... *sniffs*";
         }
-        public override void DisplayInfo()
-        {
-            base.DisplayInfo();
-            Console.WriteLine($"Name: {Name}, Level: {Level}, Loot: {Loot}");
-        }
     }
 
     class Program
@@ -142,17 +133,17 @@ namespace Assignment_2._1._1
             Animal Bumpy = new(4, "A gentle and mild puppy", "Bumpy", "Skittles", 1);
 
             // Display information
-            Bluey.DisplayInfo();
-            Console.WriteLine(Bluey.Interact());
-
             Tracy.DisplayInfo();
-            Console.WriteLine(Tracy.Dialogue);
+            Console.WriteLine(Tracy.Dialogue());
+
+            Bluey.DisplayInfo();
+            Console.WriteLine(PlayerCharacter.Interact());
 
             Socks.DisplayInfo();
-            Console.WriteLine(Socks.Dialogue);
+            Console.WriteLine(Socks.Dialogue());
 
             Bumpy.DisplayInfo();
-            Console.WriteLine(Bumpy.Dialogue);
+            Console.WriteLine(Bumpy.Dialogue());
         }
     }
 }
