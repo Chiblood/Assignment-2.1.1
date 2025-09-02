@@ -7,21 +7,23 @@ Design a class hierarchy of your choice. (Need only class files )
         Mob
             Animal
 */
-
-// Base class, restricted from instantiation
-public abstract class Entity(int id, string description)
+namespace Assignment2._1._1
 {
-    public int Id { get; set; } = id;
-    public string Description { get; set; } = description;
-
-    // public Entity(int id, string description)
-    // {
-    //     Id = id;
-    //     Description = description;
-    // }
-
-    public virtual void DisplayInfo()
+    // Base class, restricted from instantiation
+    public abstract class Entity(int id, string description)
     {
-        Console.WriteLine($"ID: {Id}, Description: {Description}");
+        public int Id { get; set; } = id;
+        public string Description { get; set; } = description;
+
+        // public Entity(int id, string description)
+        // {
+        //     Id = id;
+        //     Description = description;
+        // }
+
+        public virtual void DisplayInfo()
+        {
+            Console.WriteLine($"ID: {Id}, Description: {Description}");
+        }
     }
 }
